@@ -8,13 +8,13 @@ terraform {
 
   }
   backend "s3" {
-    bucket         = "outcloud-tf-state-tooling"
+    bucket         = ""
     region         = "eu-central-1"
     key            = "docs-s3-cloudfront/terraform.tfstate"
-    dynamodb_table = "outcloud-tf-state-tooling"
+    dynamodb_table = ""
     encrypt        = true
     assume_role = {
-      role_arn = "arn:aws:iam::707072452962:role/OrganizationAccountAccessRole"
+      role_arn = "arn:aws:iam::"
     }
   }
 }
